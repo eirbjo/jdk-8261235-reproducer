@@ -217,6 +217,7 @@ public class JDK8261235Reproducer {
         private final byte[] bytes;
 
         public ByteArrayClassLoader(String className, byte[] bytes) {
+            super(ByteArrayClassLoader.class.getClassLoader());
             this.className = className;
             this.bytes = bytes;
         }
